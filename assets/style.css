@@ -1,10 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;1,100&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300&display=swap');
+
 body {
   min-height: 100vh;
   display: flex;
   justify-content: center;
-  background: #f1f2f5;
+  background: linear-gradient(135deg , #f1f2f5 ,#e6e6e6);
 }
 #app{
     margin: 50px;
@@ -25,13 +27,13 @@ body {
   line-height: 35px;
 }
 .todo-title{
-  font-size: 24px;
-  font-family: 'Roboto', sans-serif;
+  font-size: 40px;
+  font-family: 'roboto', sans-serif;
   color: #4d515a;
 }
 .todos-header p {
   font-size: 0.9rem;
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Outfit', sans-serif;
 }
 .todos-clear{
   border: none;
@@ -74,7 +76,7 @@ body {
   background:transparent;
   border:none;
   cursor:pointer;
-  margin-right: 20px;
+  margin: 0px 15px;
   font-size: 20px;
 }
 
@@ -97,6 +99,7 @@ body {
 }
 
 .inputcss{
+  width: 80%;
   font-size: 1.1rem;
   font-family: 'Poppins', sans-serif;
   border: none;
@@ -119,4 +122,11 @@ body {
   .todos{
     width: 450%;
   }
+}
+
+/* ---------------------------------- */
+#social{
+  position: fixed;
+  bottom: 5px;
+  right: 5px;
 }

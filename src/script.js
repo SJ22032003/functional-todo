@@ -58,6 +58,9 @@ function renderTodos(todos){
 //----------------------------------
 function addTodo(event){
     event.preventDefault();
+    if(input.value.trim() == ''){
+        return;
+    }
     const label = input.value.trim();          // trim() will delete access spaces
     const complete = false;
     todos = [                                 // we are creating a list with Objects inside it
@@ -179,3 +182,10 @@ function init(){
 }
 
 init()
+
+//-------------------
+const social = document.getElementById('social');
+setInterval(function(){
+    social.classList.add('animate__animated', 'animate__heartBeat');
+}, 3000);
+

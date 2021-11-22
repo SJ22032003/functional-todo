@@ -95,3 +95,9 @@ body {
   text-decoration: line-through;
   color: rgb(204, 204, 204);
 }
+
+.inputcss{
+  font-size: 1.1rem;
+  font-family: 'Poppins', sans-serif;
+  border: none;
+}

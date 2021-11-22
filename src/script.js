@@ -88,6 +88,51 @@ function updateTodo(event){
     renderTodos(todos);
     saveToStorage(todos);
 }
+
+//--------------------------------------
+
+function editTodo(event){
+    if(event.target.nodeName !== 'SPAN'){
+        return
+    }
+    const id = parseInt(event.target.parentNode.parentNode.getAttribute('data-id'),10);
+    const todoLabel = todos[id].label;
+    
+    const input = document.createElement('input');
+        input.setAttribute('type' , 'text');
+    input.value = todoLabel;
+    input.classList.add('inputcss');
+
+    function handleEdit(event){
+     
+        event.stopPropagation();
+        const label = this.value;
+        if(this.value !== todoLabel){
+            todos = todos.map((todo ,index) => {
+                if(index === id){
+                    return{
+                        ...todo,
+                        label,
+                    };
+                }
+                return todo;
+            });
+            console.log(todos)
+            renderTodos(todos);
+            saveToStorage(todos);
+        }
+        //CleanUp
+        event.target.style.display = 'none';
+        this.removeEventListener('change', handleEdit);
+        this.remove();
+    }
+
+    event.target.style.display = 'none';
+    event.target.parentNode.append(input);
+    input.addEventListener('change', handleEdit);
+    input.focus();
+}
+
 //--------------------------------------
 
 function deleteTodo(event){
@@ -126,6 +171,8 @@ function init(){
     form.addEventListener('submit', addTodo);
     // update Todo
     list.addEventListener('change', updateTodo);      //delegating the event
+    // Edit todo
+    list.addEventListener('dblclick',editTodo);
     //Delete Todo
     list.addEventListener('click' , deleteTodo);      // deleting 
     //Complete All todos

@@ -1,0 +1,97 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;1,100&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap');
+body {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  background: #f1f2f5;
+}
+#app{
+    margin: 50px;
+    width: 800px;
+    display: flex;
+    justify-content: center;
+}
+/* --------------------------------------- */
+.todos{
+    background: #fff;
+    height: fit-content;
+    width: 500px;
+    border-radius: 10px;
+    box-shadow: 0 3px 0 rgba(84, 94, 111, 0.2);
+}
+.todos-header{
+  margin: 20px 0px 20px 20px;
+  line-height: 35px;
+}
+.todo-title{
+  font-size: 24px;
+  font-family: 'Roboto', sans-serif;
+  color: #4d515a;
+}
+.todos-header p {
+  font-size: 0.9rem;
+  font-family: 'Roboto', sans-serif;
+}
+.todos-clear{
+  border: none;
+  color: grey;
+  background-color:rgba(218, 218, 218, 0.342) ;
+  cursor: pointer;
+}
+.todos-clear:hover {
+  color: #ff5858;
+}
+.todos-clear:focus {
+  color: #ff5858;
+  border-color: #ff5858;
+}
+.todos-form{
+  margin: 10px;
+  display: flex;
+  justify-content: center;
+}
+.todos-form input{
+  padding: 10px;
+  width: 95%;
+  margin: 20px;
+  font-family: 'Segoe UI',sans-serif;
+}
+.todos-form input:focus {
+  border-color: #24b373;
+  box-shadow: 0 0 0 3px #cff1e2;
+}
+
+/* ------------------------------------ */
+
+.todos-list li{
+  list-style: none;
+  margin: 20px;
+  display: flex;
+  justify-content: space-between;
+}
+.remove{
+  background:transparent;
+  border:none;
+  cursor:pointer;
+  margin-right: 20px;
+  font-size: 20px;
+}
+
+.check{
+  margin-right: 10px;
+  width: 15px;
+  height: 15px;
+  background-color: green;
+}
+
+
+.toDone{
+  font-size: 1.1rem;
+  font-family: 'Poppins', sans-serif;
+}
+
+.todos-complete{
+  text-decoration: line-through;
+  color: rgb(204, 204, 204);
+}

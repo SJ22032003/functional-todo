@@ -50,7 +50,6 @@ function renderTodos(todos){
             </li>
         `;
     });
-
     list.innerHTML = todoString;
     count.innerText = todos.filter(todo => !todo.complete).length;
     clear.style.display = todos.filter(todo => todo.complete).length?'block':'none';

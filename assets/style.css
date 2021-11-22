@@ -101,3 +101,22 @@ body {
   font-family: 'Poppins', sans-serif;
   border: none;
 }
+
+/* ------------Responsive------ */
+
+@media screen and (max-width:480px) {
+  #app{
+    margin: 10px;
+  }
+  .todos{
+    width: 100%;
+  }
+}
+@media screen and (max-width:768px){
+  #app{
+    margin: 10px;
+  }
+  .todos{
+    width: 450%;
+  }
+}
